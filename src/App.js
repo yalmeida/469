@@ -63,10 +63,11 @@ componentDidMount(){
   return (
     <div className="App">
       <form onSubmit={this.handleSubmit}> 
+        <div className="user-input">
         <label>
-          Name 
+          Enter Your Player's Name <br />
           <input
-          className="user-search"
+          class="user-search"
            type="text"
            value={this.state.value}
            onChange={this.handleChange}
@@ -74,6 +75,7 @@ componentDidMount(){
           />
           <input type="submit" value="Submit"/>
         </label>
+        </div>
       </form>
       <div className="stats">
 

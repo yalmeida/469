@@ -5,12 +5,21 @@
 
 }
 
+.user-input{
+text-align: center;
+font-size: 45px;
+}
+
+
+.user-input input{
+  
+}
 html{
   background-color: brown;
 }
 
 .stats{
   text-align: center;
-  font-size: x-large;
-  padding-top: 300px;
+  font-size: 45px;
+  padding-top: 150px;
 }
