@@ -1,0 +1,42 @@
+.navbar {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .navbar-logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-item {
+    margin-left: 20px;
+  }
+  
+  .navbar-link {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar-link:hover {
+    color: #ccc;
+  }
+  
+  .Sports {
+    margin-left: 20px;
+    list-style: none;
+    
+  }

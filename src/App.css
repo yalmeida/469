@@ -7,7 +7,7 @@
 
 .user-input{
 text-align: center;
-font-size: 45px;
+font-size: 35px;
 }
 
 
@@ -15,11 +15,12 @@ button{
   background-color: black;
   color: white;
   font-size: 20px;
-  padding: 10px 60px;
-
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .user-input input{
+  padding: 10px;
 
 }
 html{
@@ -28,6 +29,6 @@ html{
 
 .stats{
   text-align: center;
-  font-size: 45px;
-  padding-top: 150px;
+  font-size: 35px;
+  padding-top: 25px;
 }

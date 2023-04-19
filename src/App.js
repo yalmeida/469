@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import './App.css';
+import Navbar from './Navbar';
 
 class App extends Component {
   constructor(props){
@@ -62,6 +63,9 @@ componentDidMount(){
   render(){
   return (
     <div className="App">
+
+      <Navbar />
+      <br /><br />
       <form onSubmit={this.handleSubmit}> 
         <div className="user-input">
         <label>
@@ -72,26 +76,35 @@ componentDidMount(){
            value={this.state.value}
            onChange={this.handleChange}
           />
+          <br />
+          Enter Year:<br />
+          <input
+          class="year-search"
+           type="text"
+           value={this.state.value}
+           onChange={this.handleChange}
+          />
+          <br />
           <button type="submit">Submit</button>
+          
         </label>
+
+        
         </div>
       </form>
       <div className="stats">
 
-      {this.state.playerName}
-
-      <br />
-      <br />
-
-
+    
+      
         Games Played: {this.state.playerStats["games_played"]}
         <br />
-        Points Averaged: {this.state.playerStats["pts"]}
+        Points Averaged in Those Games: {this.state.playerStats["pts"]}
         <br />
-        Rebounds Averaged: {this.state.playerStats["reb"]}
+        Rebounds Averaged in Those Games: {this.state.playerStats["reb"]}
         <br />
-        Assists Averaged: {this.state.playerStats["ast"]}
+        Assists Averaged in Those Games: {this.state.playerStats["ast"]}
         <br />
+       
       </div>
     </div>
   );
