@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import './App.css';
 
 class App extends Component {
   constructor(props){
@@ -29,7 +30,7 @@ class App extends Component {
 getPlayerId = () => {
   axios.get(`https://www.balldontlie.io/api/v1/players?search=${this.state.playerName}`)
   .then(async res => {
-    //console.log(res.data.data)
+    console.log(res.data.data)
     if(res.data.data[0] === undefined){
       alert("Cant search player")
     } else if(res.data.data.length > 1){
@@ -65,6 +66,7 @@ componentDidMount(){
         <label>
           Name 
           <input
+          className="user-search"
            type="text"
            value={this.state.value}
            onChange={this.handleChange}
@@ -73,15 +75,23 @@ componentDidMount(){
           <input type="submit" value="Submit"/>
         </label>
       </form>
+      <div className="stats">
 
-      Games Played: {this.state.playerStats["games_played"]}
+      {this.state.playerName}
+
       <br />
-      Points Averaged: {this.state.playerStats["pts"]}
       <br />
-      Rebounds Averaged: {this.state.playerStats["reb"]}
-      <br />
-      Assists Averaged: {this.state.playerStats["ast"]}
-      <br />
+
+
+        Games Played: {this.state.playerStats["games_played"]}
+        <br />
+        Points Averaged: {this.state.playerStats["pts"]}
+        <br />
+        Rebounds Averaged: {this.state.playerStats["reb"]}
+        <br />
+        Assists Averaged: {this.state.playerStats["ast"]}
+        <br />
+      </div>
     </div>
   );
 }
