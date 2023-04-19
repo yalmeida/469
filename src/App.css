@@ -11,8 +11,16 @@ font-size: 45px;
 }
 
 
+button{
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 10px 60px;
+
+}
+
 .user-input input{
-  
+
 }
 html{
   background-color: brown;

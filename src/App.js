@@ -71,9 +71,8 @@ componentDidMount(){
            type="text"
            value={this.state.value}
            onChange={this.handleChange}
-           placeholder="please enter players name"
           />
-          <input type="submit" value="Submit"/>
+          <button type="submit">Submit</button>
         </label>
         </div>
       </form>
