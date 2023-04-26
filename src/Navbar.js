@@ -5,14 +5,29 @@ import "./Navbar.css"; // Import the CSS file
 function Navbar() {
   return (
     <nav className="navbar">
-      <Link className="navbar-logo" to="/">
+      <Link className="navbar-logo" to="./App.js">
         SportsPredict
       </Link>
 
       <ul className="Sports">
         <li>
-          <Link className="navbar-link" to="/">
-            NBA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NFL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NHL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MLS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <Link className="sports-link" to="/">
+            NBA 
+          </Link>
+        </li>
+        <li>
+          <Link className="sports-link" to="/">
+            NFL
+          </Link>
+        </li>
+        <li>
+          <Link className="sports-link" to="/">
+            NHL
+          </Link>
+        </li>
+        <li>
+          <Link className="sports-link" to="/">
+            MLS
           </Link>
         </li>
         

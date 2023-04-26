@@ -1,13 +1,14 @@
 .App {
 
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Rockwell Condensed;
+  font-weight: bolder;
   color:antiquewhite;
 
 }
 
 .user-input{
 text-align: center;
-font-size: 35px;
+font-size: 40px;
 }
 
 
@@ -24,11 +25,12 @@ button{
 
 }
 html{
-  background-color: brown;
+  background-color: rgb(156, 15, 15);
 }
 
 .stats{
   text-align: center;
-  font-size: 35px;
+  font-size: 40px;
   padding-top: 25px;
+  border: 4px solid;
 }

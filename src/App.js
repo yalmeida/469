@@ -3,14 +3,26 @@ import axios from 'axios';
 import './App.css';
 import Navbar from './Navbar';
 
+
 class App extends Component {
+
+  
   constructor(props){
     super(props)
     this.state = {
       playerName: null,
+      showText: false,
       playerStats: {}
     }
+
+  
   }
+
+  handleButtonClick = () => {
+    this.setState(prevState => ({ showText: !prevState.showText }));
+  };
+
+  
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -60,6 +72,8 @@ componentDidMount(){
   this.getPlayerStats()
 }
 
+
+
   render(){
   return (
     <div className="App">
@@ -76,17 +90,11 @@ componentDidMount(){
            value={this.state.value}
            onChange={this.handleChange}
           />
-          <br />
-          Enter Year:<br />
-          <input
-          class="year-search"
-           type="text"
-           value={this.state.value}
-           onChange={this.handleChange}
-          />
+          
           <br />
           <button type="submit">Submit</button>
           
+
         </label>
 
         
@@ -98,16 +106,38 @@ componentDidMount(){
       
         Games Played: {this.state.playerStats["games_played"]}
         <br />
-        Points Averaged in Those Games: {this.state.playerStats["pts"]}
+        Points Averaged: {this.state.playerStats["pts"]}
         <br />
-        Rebounds Averaged in Those Games: {this.state.playerStats["reb"]}
+        Rebounds Averaged: {this.state.playerStats["reb"]}
         <br />
-        Assists Averaged in Those Games: {this.state.playerStats["ast"]}
+        Assists Averaged: {this.state.playerStats["ast"]}
         <br />
+
+        {this.state.showText && (
+          <p>
+           Field Goals Made: {this.state.playerStats["fgm"]}
+           <br />
+           Field Goals Attempeted: {this.state.playerStats["fga"]}
+           <br />
+           Steals Averaged: {this.state.playerStats["stl"]}
+           <br />
+           Blocks Averaged: {this.state.playerStats["blk"]}
+           <br />
+           Turnovers Averaged: {this.state.playerStats["turnover"]}
+           <br />
+          </p>
+        )}
+        <button onClick={this.handleButtonClick}>
+          {this.state.showText ? 'Show Less' : 'Show More'}
+        </button>
+        
+     
        
       </div>
     </div>
   );
 }
 }
+
+
 export default App;
